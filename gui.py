@@ -29,23 +29,21 @@ def on_generate(event=None):
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
-root.geometry("800x600")
+root.geometry("600x400")
 root.configure(bg="black")
-
-# Function to handle Enter key press event in entry field
-def handle_enter(event):
-    on_generate()
 
 # Add a Text widget for the ASCII art logo
 text_widget = tk.Text(root, height=10, bg="black", fg="light blue", borderwidth=0, highlightthickness=0, font=("Courier", 12))
 text_widget.pack(pady=10)
 
 ascii_art = """
-       ___                 ___                          _             
-      / _ \\__ _ ___ ___   / _ \\___ _ __   ___ _ __ __ _| |_ ___  _ __ 
-     / /_)/ _` / __/ __| / /_\\/ _ \\ '_ \\ / _ \\ '__/ _` | __/ _ \\| '__|
-    / ___/ (_| \\__ \\__ \\/ /_\\\\  __/ | | |  __/ | | (_| | || (_) | |   
-    \\/    \\__,_|___/___/\\____/\\___|_| |_|\\___|_|  \\__,_|\\__\\___/|_|   
+ ██████╗ ██╗   ██╗██╗██████╗  █████╗ ███████╗███████╗
+██╔════╝ ██║   ██║██║██╔══██╗██╔══██╗██╔════╝██╔════╝
+██║  ███╗██║   ██║██║██████╔╝███████║███████╗███████╗
+██║   ██║██║   ██║██║██╔═══╝ ██╔══██║╚════██║╚════██║
+╚██████╔╝╚██████╔╝██║██║     ██║  ██║███████║███████║
+ ╚═════╝  ╚═════╝ ╚═╝╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝
+                                                     
 """
 
 # Insert the ASCII art into the Text widget and set its color
@@ -59,11 +57,11 @@ input_label = tk.Label(root, text="Enter password length:", fg="light blue", bg=
 input_label.pack(pady=5)
 entry = tk.Entry(root, width=20, bg="black", fg="light blue")
 entry.pack(pady=5)
-entry.bind("<Return>", handle_enter)  # Bind Enter key to handle_enter function
+entry.bind("<Return>", on_generate)  # Bind Enter key to on_generate function
 
 # Add generate button
-generate_button = tk.Button(root, text="Generate or click Enter", command=on_generate, bg="black", fg="light blue")
-generate_button.pack(pady=22)
+generate_button = tk.Button(root, text="Generate", command=on_generate, bg="black", fg="light blue")
+generate_button.pack(pady=20)
 
 # Add result label
 result_label = tk.Label(root, text="", font=("Helvetica", 12), fg="light blue", bg="black")
