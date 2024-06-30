@@ -29,7 +29,7 @@ def on_generate(event=None):
 # Create the main window
 root = tk.Tk()
 root.title("Password Generator")
-root.geometry("600x400")
+root.geometry("600x600")
 root.configure(bg="black")
 
 # Add a Text widget for the ASCII art logo
