@@ -1,6 +1,6 @@
 # ABOUT
 
-~ This is `version 2.0.0` of repository `passgenerator` that has been upgraded with a lot more functions and enviroment!
+~ This is `version 2.0.0` of repository `passgenerator` that has been upgraded with a lot more functions and new enviroment!
 ------
 # REQUIREMENTS
 
