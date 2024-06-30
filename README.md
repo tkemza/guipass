@@ -43,7 +43,7 @@
 
 ~ You can generate your password by:
 
-1. Clicking on `Generate Password`
+1. Clicking on `Generate` button on GUI
 
 2. Clicking on **<`ENTER`>** button on your keyboard
 
